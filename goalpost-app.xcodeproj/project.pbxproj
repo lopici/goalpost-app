@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		01B8F80D1FC589B300E73160 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B8F80C1FC589B300E73160 /* AppDelegate.swift */; };
-		01B8F80F1FC589B300E73160 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B8F80E1FC589B300E73160 /* ViewController.swift */; };
+		01B8F80F1FC589B300E73160 /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B8F80E1FC589B300E73160 /* GoalsVC.swift */; };
 		01B8F8121FC589B300E73160 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B8F8101FC589B300E73160 /* Main.storyboard */; };
 		01B8F8151FC589B300E73160 /* goalpost_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01B8F8131FC589B300E73160 /* goalpost_app.xcdatamodeld */; };
 		01B8F8171FC589B300E73160 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B8F8161FC589B300E73160 /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		01B8F8091FC589B300E73160 /* goalpost-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "goalpost-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B8F80C1FC589B300E73160 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01B8F80E1FC589B300E73160 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		01B8F80E1FC589B300E73160 /* GoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsVC.swift; sourceTree = "<group>"; };
 		01B8F8111FC589B300E73160 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01B8F8141FC589B300E73160 /* goalpost_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = goalpost_app.xcdatamodel; sourceTree = "<group>"; };
 		01B8F8161FC589B300E73160 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 		01B8F8241FC58AF800E73160 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				01B8F80E1FC589B300E73160 /* ViewController.swift */,
+				01B8F80E1FC589B300E73160 /* GoalsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -171,7 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01B8F80F1FC589B300E73160 /* ViewController.swift in Sources */,
+				01B8F80F1FC589B300E73160 /* GoalsVC.swift in Sources */,
 				01B8F80D1FC589B300E73160 /* AppDelegate.swift in Sources */,
 				01B8F8151FC589B300E73160 /* goalpost_app.xcdatamodeld in Sources */,
 			);
