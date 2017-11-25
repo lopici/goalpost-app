@@ -13,6 +13,11 @@ class GoalsVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBAction func addGoalBtnWasPressed(_ sender: Any) {
+        guard  let createGoalVC = storyboard?.instantiateViewController(withIdentifier: "CreateGoalVC") else {
+            return
+        }
+        presentDetail(createGoalVC)
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
