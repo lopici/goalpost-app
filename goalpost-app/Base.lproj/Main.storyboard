@@ -151,6 +151,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="bhk-Ve-3Fb" secondAttribute="bottom" id="UhP-VO-Zwg"/>
                                                 <constraint firstItem="bhk-Ve-3Fb" firstAttribute="leading" secondItem="zCU-UY-G2L" secondAttribute="leading" constant="10" id="ivF-G2-kbL"/>
                                                 <constraint firstAttribute="bottom" secondItem="r4D-hY-Q6J" secondAttribute="bottom" constant="8" id="pNV-2N-RyP"/>
+                                                <constraint firstItem="r4D-hY-Q6J" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bhk-Ve-3Fb" secondAttribute="trailing" constant="10" id="rj0-yK-C3T"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
