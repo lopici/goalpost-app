@@ -72,9 +72,15 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
             self.fetchCoreDataObjects()
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
-        deleteAction.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+        let addAction = UITableViewRowAction(style: .normal, title: "ADD 1") { (rowAction, indexPath) in
+            self.setProgress(atIndexPath: indexPath)
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
         
-        return [deleteAction]
+        deleteAction.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+        addAction.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.6509803922, blue: 0.137254902, alpha: 1)
+        
+        return [deleteAction, addAction]
     }
     
     func fetchCoreDataObjects() {
@@ -93,6 +99,24 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension GoalsVC {
+    func setProgress(atIndexPath indexPath: IndexPath) {
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        
+        let chosenGoal = goals[indexPath.row]
+        if chosenGoal.goalProgress < chosenGoal.goalCompletionValue {
+            chosenGoal.goalProgress = chosenGoal.goalProgress + 1
+        }
+        else {
+            return
+        }
+        do{
+            try managedContext.save()
+            print("Successfully set progress.")
+        } catch {//errors should be displayed on the screen
+            debugPrint("Could not set progress \(error.localizedDescription)")
+        }
+    }
+    
     func fetch(completion: (_ complete: Bool) ->()) {
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
         
